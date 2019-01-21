@@ -1,0 +1,1063 @@
+/*
+ * Colores:
+ * - Azul asterisco logo: #32add6
+ * - Morado fondo logo: #242a59
+ * - Color rosa link guapo: #ec1752
+ *
+ * Fuentes:
+ * font-family: 'Thasadith', sans-serif;
+ * font-family: 'Ubuntu', sans-serif;
+ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Thasadith', sans-serif;
+}
+
+::selection {
+  background-color: black;
+  color: #32add6;
+}
+
+::-moz-selection {
+  background-color: black;
+  color: #32add6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  color: #242a59;
+  margin: 0;
+}
+
+p, li {
+  font-family: 'Thasadith', sans-serif;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 36px;
+  transform: translateY(50px);
+  opacity: 0;
+  /* transition: all .3s ease-in-out; */
+}
+
+.sectionTitle span {
+  position: relative;
+}
+
+.sectionTitle span::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: -40px;
+  height: 1px;
+  width: 30px;
+  background-color: #242a59;
+  /* animation: increaseBarLeft 2s ease-in-out infinite; */
+}
+
+.sectionTitle span::after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  right: -40px;
+  height: 1px;
+  width: 30px;
+  background-color: #242a59;
+  /* animation: increaseBarRight 2s ease-in-out infinite; */
+}
+
+@keyframes increaseBarRight {
+  0% {
+    width: 30px;
+    right: -40px;
+  }
+  50% {
+    width: 200px;
+    right: -240px;
+  }
+  100% {
+    width: 30px;
+    right: -40px;
+  }
+}
+
+@keyframes increaseBarLeft {
+  0% {
+    width: 30px;
+    left: -40px;
+  }
+  50% {
+    width: 200px;
+    left: -240px;
+  }
+  100% {
+    width: 30px;
+    left: -40px;
+  }
+}
+
+section:not(#artistas) {
+  padding: 20px;
+}
+
+.artistas .sectionTitle {
+  margin-top: 20px;
+}
+
+.titleIn {
+  animation: titleAnim .5s ease-in-out forwards;
+}
+
+@keyframes titleAnim {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HOME */
+
+.background_image {
+  height: 100vh;
+  overflow: hidden;
+}
+.background_image img {
+  height: auto;
+  width: 100%;
+}
+
+/* ================= *\
+|* === BG SLIDER === *|
+\* ================= */
+
+.homeSlider {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.homeSlider li {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: blur(4px);
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  animation: slide 15s linear infinite;
+}
+
+.homeSlider li:nth-child(1) {
+  background-image: url(img/snowboard.jpeg);
+}
+
+.homeSlider li:nth-child(2) {
+  background-image: url(img/snowboard2.jpeg);
+  animation-delay: 5s;
+}
+
+.homeSlider li:nth-child(3) {
+  background-image: url(img/snowboard3.jpeg);
+  animation-delay: 10s;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  4% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  36% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+/* .backgroundSlider {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.backgroundSlider li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.backgroundSlider li:first-child {
+  opacity: 1;
+}
+
+.backgroundSlider li img {
+  width: 110%;
+  height: auto;
+}
+
+@keyframes backgroundSlider {
+
+} */
+/* ================= *\
+|* ===== VIDEO ===== *|
+\* ================= */
+
+.background-video {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+/* ================= *\
+|* ====== MENU ===== *|
+\* ================= */
+
+
+.menu_button {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  padding: 20px 20px 0 0;
+  color: white;
+  text-align: right;
+  cursor: pointer;
+  width: 60px;
+  z-index: 99999;
+}
+
+.hideMenu {
+  right: -50%!important;
+}
+
+.main-menu {
+  background-color: #242a59;
+  z-index: 99990;
+  height: 100vh;
+  position: fixed;
+  width: 30%;
+  top: 0;
+  right: -5%;
+  padding-top: 50px;
+  transform: skewX(-4deg);
+  transition: right .3s ease-in-out;
+}
+
+.circulo {
+  position: fixed;
+  height: 500px;
+  width: 500px;
+  top: -350px;
+  right: -350px;
+  background-color: #242a59;
+  border-radius: 50%;
+}
+
+.hamburger,
+.hamburger--collapse,
+.hamburger-box {
+  z-index: 99995;
+}
+
+nav {
+  box-shadow: -6px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  opacity: 0;
+  transform: translateX(300px);
+  position: relative;
+}
+
+nav ul li::after {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background-color: #32add6;
+  position: absolute;
+  bottom: 25px;
+  left: 150px;
+  right: 0;
+  margin: auto;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+nav ul li:hover::after {
+  opacity: 1;
+  left: 0;
+}
+
+.animationItem1 {
+  animation: itemIn .4s .2s 1 ease-in-out forwards;
+}
+
+.animationItem2 {
+  animation: itemIn .4s .3s 1 ease-in-out forwards;
+}
+
+.animationItem3 {
+  animation: itemIn .4s .4s 1 ease-in-out forwards;
+}
+
+.animationItem4 {
+  animation: itemIn .4s .5s 1 ease-in-out forwards;
+}
+
+.animationItem5 {
+  animation: itemIn .4s .6s 1 ease-in-out forwards;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+  font-size: 30px;
+  transition: color .3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #32add6;
+}
+
+
+@keyframes itemIn {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.logo_menu {
+  opacity: 0;
+  transform: translateY(300px);
+}
+
+.animatedLogo {
+  animation: logoIn 2s 1 ease-in-out forwards;
+}
+
+@keyframes logoIn {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= *\
+|* ==== ARTISTAS === *|
+\* ================= */
+
+/* ESTA ES LA CLASE QUE SE APLICA A LA IMAGEN DE INICIO PARA QUE SE MUESTRE CORRECTAMENTE EL DETALLE DE CADA DJ */
+.hideHome {
+  height: 0;
+}
+
+.content__item-intro {
+  position: relative;
+}
+
+.content__item-intro h2 {
+  color: white;
+  position: absolute;
+  margin: 0;
+  left: 40px;
+  bottom: 40px;
+  padding: 40px;
+}
+
+.arrowDown {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 50px;
+  animation: arrowMoves 1s ease-in-out infinite;
+}
+
+.arrowDown img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes arrowMoves {
+  50%{
+    bottom: 20px;
+  }
+  100%{
+    bottom: 40px;
+  }
+}
+
+.titleBackgroundOn {
+  background-color: #242a59;
+}
+
+.content__item-text p {
+  font-family: 'Thasadith', sans-serif;
+  color: #242a59;
+}
+
+.content__item-text h4 {
+  margin: 0;
+}
+
+.content__item-text .stageData {
+  padding: 20px 0;
+  font-size: 18px;
+  border: 1px solid #242a59;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.DJSocialNetwork {
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.DJSocialNetwork li a {
+  color: #242a59;
+  transition: color .3s ease-in-out;
+}
+
+.DJSocialNetwork li a:hover {
+  color: #32add6;
+}
+
+.followDJquote {
+  text-align: right;
+  font-style: italic;
+}
+
+.content__item--current {
+  padding-top: 0;
+}
+
+button.content__close {
+  color: #242a59;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  left: 40px;
+}
+
+button.content__close img {
+  width: 100%;
+  height: auto;
+}
+
+.smallArtistTitle {
+  font-size: 5vw!important;
+}
+
+.verySmallArtistTitle {
+  font-size: 4vw!important;
+}
+
+
+/* ================= *\
+|* == EL FESTIVAL == *|
+\* ================= */
+
+.theFestival,
+.news {
+  background-color: #32add6;
+  color: #242a59;
+  padding: 20px;
+}
+
+.botones_horarios {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.close_horarios_anim {
+  transform: translateY(-50vw);
+}
+
+.horarios_full {
+  position: fixed;
+  top: 40vw;
+  left: -30vw;
+  width: 60px;
+  height: 60px;
+  background-color: #242a59;
+  border-radius: 50%;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border: 14px solid #32add6;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .5);
+  transition: transform .5s ease-in-out;
+}
+
+.horarios_full .close_schedule {
+  width: 50px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.animacionPelota {
+  /* animation: horariosIn 5s 1s ease-in-out forwards; */
+  animation: pelotaInV2 5s ease-in-out forwards;
+}
+
+.fadeInHorariosLista {
+  animation: fadeInHorarios .5s 5s ease-in-out forwards;
+}
+
+.fadeInHorariosClose {
+  animation: fadeInHorarios .5s 6s ease-in-out forwards;
+}
+
+.horarios_full .close_schedule img {
+  width: 100%;
+  height: auto;
+}
+
+.horarios_full .real_schedule {
+  padding-top: 31vw;
+  display: flex;
+  opacity: 0;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.horarios_full .real_schedule ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.horarios_full .real_schedule ul li {
+  font-size: 24px;
+  color: #32add6;
+}
+
+.horarios_full .real_schedule ul li span {
+  color: white;
+}
+
+.horarios_full .real_schedule h4 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+@keyframes pelotaInV2 {
+  0% {
+    width: 60px;
+    height: 60px;
+    top: 40vh;
+    left: -30vw;
+  }
+  33% {
+    width: 60px;
+    height: 60px;
+    top: 40vh;
+    left: 60vw;
+  }
+  66% {
+    width: 60vh;
+    height: 60vh;
+    top: 40vh;
+    left: 20vw;
+  }
+  100% {
+    width: 60vw;
+    height: 60vw;
+    top: -50vh;
+    left: 20vw;
+  }
+}
+
+@keyframes horariosIn {
+  0% {
+    width: 60px;
+    height: 60px;
+    top: 40vh;
+    left: -30vw;
+  }
+  20% {
+    width: 60px;
+    height: 60px;
+    top: 40vh;
+    left: 60vw;
+  }
+  25% {
+    width: 60px;
+    height: 60px;
+    top: 40vh;
+    left: 65vw;
+  }
+  30% {
+    width: 60px;
+    height: 60px;
+    top: 45vh;
+    left: 60vw;
+  }
+  40% {
+    width: 60px;
+    height: 60px;
+    top: -100vh;
+    left: 60vw;
+  }
+  60% {
+    width: 60px;
+    height: 60px;
+    top: -50vh;
+    left: 20vw;
+  }
+  80% {
+    width: 60vw;
+    height: 60vw;
+    top: -35vh;
+    left: 20vw;
+  }
+  100% {
+    width: 60vw;
+    height: 60vw;
+    top: -50vh;
+    left: 20vw;
+  }
+}
+
+@keyframes fadeInHorarios {
+  100% {
+    opacity: 1;
+  }
+}
+
+.theFestival p,
+.spaces p {
+  font-family: 'Thasadith', sans-serif;
+}
+
+.theFestival h3 {
+  color: #242a59;
+}
+
+.festMap {
+  width: 95%;
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.festMap .festText {
+  width: 40%;
+  text-align: justify;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+}
+
+.festMap .festText p {
+  margin-top: 0;
+  font-size: 20px;
+  position: relative;
+}
+
+.festMap .festText p::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 3px;
+  width: 150px;
+  background-color: #242a59;
+  transition: width .5s ease-out;
+}
+
+.festMap .festText p:hover:after {
+  width: 250px;
+}
+
+.festGallery {
+  position: relative;
+}
+
+.festGallery::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 3px;
+  width: 150px;
+  background-color: #242a59;
+  transition: width .5s ease-out;
+}
+
+.festGallery:hover:after {
+  width: 250px;
+}
+
+.inline_gallery {
+  height: 150px;
+  width: 468px;
+  overflow: hidden;
+  display: flex;
+}
+
+.festGallery h3 {
+  padding-bottom: 20px;
+}
+
+.inline_gallery a {
+  margin-right: 15px;
+  position: relative;
+}
+
+.inline_gallery a::before {
+  content: '+';
+  position: absolute;
+  top: -200px;
+  left: 0;
+  z-index: 300;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  color: #242a59;
+  transition: top .3s ease-in-out;
+}
+
+.inline_gallery a:hover:before {
+  top: 0;
+}
+
+.inline_gallery a::after {
+  content: '';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, .6);
+  transition: opacity .3s ease-in-out;
+}
+
+.inline_gallery a:hover:after {
+  opacity: 1;
+}
+
+/* ================= *\
+|* === ESPACIOS ==== *|
+\* ================= */
+
+.spaces,
+.tickets {
+  color: #242a59;
+  padding: 20px;
+}
+
+/* ================= *\
+|* === NOTICIAS ==== *|
+\* ================= */
+
+.news {
+  color: white;
+}
+
+.newNoticia {
+  height: 400px;
+  /* background: black; */
+  /* background: url(../img/artists/lakilan.jpg); */
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(../img/artists/lakilan.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 30px 60px;
+  transition: all .3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.newNoticia .readNew {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 120px 120px 20px 120px;
+  position: absolute;
+  transform: translate(0) rotate(45deg);
+  top: -80px;
+  right: -140px;
+  transition: transform .3s ease-in-out;
+}
+
+.newNoticia .readNew svg {
+  transform: rotate(-45deg);
+}
+
+.newNoticia:hover .readNew {
+  transform: translate(0) rotate(45deg);
+  transform: rotate(45deg) translate(200px, -200px);
+}
+
+.newNoticia .newNoticia_text {
+  display: flex;
+  flex-flow: column;
+  width: 30%;
+  padding-top: 40px;
+  height: 100%;
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+.newNoticia .newNoticia_text h3 {
+  color: white;
+  font-size: 36px;
+}
+.newNoticia .newNoticia_text p {
+  font-size: 24px;
+  text-align: justify;
+}
+
+.newNoticia:hover .newNoticia_text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.news-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-text,
+.news-pic {
+  width: 48%;
+}
+
+.news-text {
+  text-align: justify;
+}
+
+.news-pic img {
+  width: 100%;
+  height: auto;
+}
+
+.noticia {
+  padding: 20px 0;
+}
+
+.noticia:nth-child(even) .news-content .news-text {
+  order: 2;
+}
+
+.noticia:nth-child(even) .news-content .news-pic {
+  order: 1;
+}
+
+/* ================= *\
+|* === ENTRADAS ==== *|
+\* ================= */
+
+.tickets_main_content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ticket-info {
+  max-width: 45%;
+  font-size: 20px;
+}
+
+.ticket-info ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tickets-form {
+  max-width: 720px;
+  margin: auto;
+  position: relative!important;
+  pointer-events: all!important;
+}
+
+.hideForm {
+  display: none;
+}
+
+.tickets-form input[type='submit'] {
+  border: 4px solid #32add6;
+  padding: 15px 50px;
+  background-color: #242a59;
+  display: block;
+  color: white;
+  margin: auto;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+}
+
+.tickets-form input[type='submit']:hover {
+  background-color: white;
+  color: black;
+}
+
+.gender-form {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 320px;
+  padding-top: 25px;
+}
+
+.gender-button input {
+  margin-right: 8px;
+}
+
+.desplegables-form {
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.desplegables-form label {
+  margin-right: 8px;
+}
+
+.input__label--kuro {
+  color: #242a59;
+}
+
+/* ================= *\
+|* ===== FOOTER ==== *|
+\* ================= */
+
+footer {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+
+
+
+.spot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+/*
+    This is the outer svg wrapper that the SVG itself will
+    fill. Multiple svg-wrapper classes can be put side by side.
+*/
+
+.svg-wrapper {
+  margin-top: 0;
+  position: relative;
+  width: 150px;
+  /*make sure to use same height/width as in the html*/
+  height: 40px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px
+}
+/*
+  This is where we define the fill, color, thickness,
+  and stroke pattern of the SVG when there is no hover.
+  The dasharray and offset together define the line position
+  under the words. Here's also where the transition speed is set.
+*/
+
+#shape {
+  stroke-width: 6px;
+  fill: transparent;
+  stroke: #242a59;
+  stroke-dasharray: 85 400;
+  stroke-dashoffset: -220;
+  transition: 1s all ease;
+}
+/*
+    Pushing the text up into the SVG. Without this the
+    text would be below the div's.
+*/
+
+#text {
+  margin-top: -35px;
+  text-align: center;
+}
+
+#text a {
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 1.1em;
+}
+/*
+    Changing the shape on hover. I change the color of the stroke,
+make it thinner, then set it to again wrap around the entire parent element.
+*/
+
+.svg-wrapper:hover #shape {
+  stroke-dasharray: 50 0;
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke: #06D6A0;
+}
