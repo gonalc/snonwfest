@@ -703,7 +703,7 @@ button.content__close img {
   position: relative;
 }
 
-.festMap .festText p::after {
+/* .festMap .festText p::after {
   content: '';
   position: absolute;
   bottom: -20px;
@@ -718,13 +718,13 @@ button.content__close img {
 
 .festMap .festText p:hover:after {
   width: 250px;
-}
+} */
 
 .festGallery {
   position: relative;
 }
 
-.festGallery::after {
+/* .festGallery::after {
   content: '';
   position: absolute;
   top: -20px;
@@ -739,7 +739,7 @@ button.content__close img {
 
 .festGallery:hover:after {
   width: 250px;
-}
+} */
 
 .inline_gallery {
   height: 150px;
