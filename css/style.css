@@ -1240,3 +1240,11 @@ make it thinner, then set it to again wrap around the entire parent element.
   stroke-dashoffset: 0;
   stroke: #06D6A0;
 }
+
+/* NIEVE */
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
