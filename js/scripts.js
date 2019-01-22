@@ -110,6 +110,62 @@ $( document ).ready(function() {
       $('.close_schedule').addClass('fadeInHorariosClose');
     });
 
+    // Seccion de noticias
+    var titulares = $('.veryNew.topRight');
+    $('.veryNew.topLeft').click(function(){
+      var isOpen = 0;
+      if(isOpen === 0){
+        titulares.css('opacity', '0');
+        $('.veryNew.bottomLeft .veryNewText').css('opacity', '0');
+        $('.veryNew.bottomRight .veryNewText').css('opacity', '0');
+        $('.veryNew.topLeft .veryNewText').css('opacity', '1');
+        $('.veryNew.topLeft .imgVeryNew').addClass('isNewActive');
+        $('.veryNew.bottomLeft .imgVeryNew').removeClass('isNewActive');
+        $('.veryNew.bottomRight .imgVeryNew').removeClass('isNewActive');
+        isOpen = 1;
+      } else {
+        titulares.css('opacity', '1');
+        $('.veryNew.topLeft .veryNewText').css('opacity', '0');
+        isOpen = 0;
+      }
+    });
+
+    $('.veryNew.bottomLeft').click(function(){
+      var isOpen = 0;
+      if(isOpen == 0){
+        titulares.css('opacity', '0');
+        $('.veryNew.topLeft .veryNewText').css('opacity', '0');
+        $('.veryNew.bottomRight .veryNewText').css('opacity', '0');
+        $('.veryNew.bottomLeft .veryNewText').css('opacity', '1');
+        $('.veryNew.bottomLeft .imgVeryNew').addClass('isNewActive');
+        $('.veryNew.bottomRight .imgVeryNew').removeClass('isNewActive');
+        $('.veryNew.topLeft .imgVeryNew').removeClass('isNewActive');
+        isOpen = 1;
+      } else {
+        titulares.css('opacity', '1');
+        $('.veryNew.bottomLeft .veryNewText').css('opacity', '0');
+        isOpen = 0;
+      }
+    });
+
+    $('.veryNew.bottomRight').click(function(){
+      var isOpen = 0;
+      if(isOpen == 0){
+        titulares.css('opacity', '0');
+        $('.veryNew.topLeft .veryNewText').css('opacity', '0');
+        $('.veryNew.bottomLeft .veryNewText').css('opacity', '0');
+        $('.veryNew.bottomRight .veryNewText').css('opacity', '1');
+        $('.veryNew.bottomRight .imgVeryNew').addClass('isNewActive');
+        $('.veryNew.topLeft .imgVeryNew').removeClass('isNewActive');
+        $('.veryNew.bottomLeft .imgVeryNew').removeClass('isNewActive');
+        isOpen = 1;
+      } else {
+        titulares.css('opacity', '1');
+        $('.veryNew.bottomRight .veryNewText').css('opacity', '0');
+        isOpen = 0;
+      }
+    });
+
     // Comprobando la clase del body para ocultar el boton del menu
 
     // if($('body').hasClass('vbox-open')){
