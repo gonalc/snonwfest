@@ -876,6 +876,7 @@ button.content__close img {
   position: relative;
   z-index: 100;
   height: 100%;
+  overflow: hidden;
 }
 
 .newsDefinitiveContainer .newNoticiaRow .veryNew.topLeft .imgVeryNew {
@@ -898,6 +899,7 @@ button.content__close img {
   top: 0;
   left: 0;
   width: 40%;
+  opacity: 0;
 }
 
 .newsDefinitiveContainer .newNoticiaRow .veryNew.bottomLeft .veryNewText {

@@ -115,7 +115,9 @@ $( document ).ready(function() {
 
     $('.topLeft').click(function(){
       titulares.css('opacity', '0');
-      $('.topLeft .veryNewText').css('left', '800px');
+      // $('.topLeft .veryNewText').css('left', '800px');
+      $('.topLeft .veryNewText').css('left', '55vw');
+      $('.topLeft .veryNewText').css('opacity', '1');
 
       $('.bottomRight .veryNewText').css('left', '0');
       $('.bottomLeft .veryNewText').css('transform', 'translateY(-430px) translateX(0)');
@@ -124,7 +126,9 @@ $( document ).ready(function() {
 
     $('.bottomRight').click(function(){
       titulares.css('opacity', '0');
-      $('.bottomRight .veryNewText').css('left', '800px');
+      // $('.bottomRight .veryNewText').css('left', '800px');
+      $('.bottomRight .veryNewText').css('left', '55vw');
+      $('.bottomRight .veryNewText').css('opacity', '1');
 
       $('.topLeft .veryNewText').css('left', '0');
       $('.bottomLeft .veryNewText').css('transform', 'translateY(-430px) translateX(0)');
@@ -133,7 +137,8 @@ $( document ).ready(function() {
 
     $('.bottomLeft').click(function(){
       titulares.css('opacity', '0');
-      $('.bottomLeft .veryNewText').css('transform', 'translateY(-430px) translateX(750px)');
+      $('.bottomLeft .veryNewText').css('transform', 'translateY(-430px) translateX(55vw)');
+      $('.bottomLeft .veryNewText').css('opacity', '1');
 
       $('.topLeft .veryNewText').css('left', '0');
       $('.bottomRight .veryNewText').css('left', '0');
