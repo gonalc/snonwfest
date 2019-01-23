@@ -847,122 +847,71 @@ button.content__close img {
 
 .newsDefinitiveContainer {
   position: relative;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
-.newsDefinitiveContainer .veryNew.topLeft {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+.veryNew.topRight {
+  transition: opacity .3s ease-in-out;
 }
 
-.newsDefinitiveContainer .veryNew.bottomLeft {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+.newsDefinitiveContainer .newNoticiaRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.newsDefinitiveContainer .veryNew.bottomRight {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-
-.newsDefinitiveContainer .veryNew .imgVeryNew {
-  width: 550px;
+.newsDefinitiveContainer .newNoticiaRow .veryNew {
+  flex-basis: 48%;
   cursor: pointer;
-  position: relative;
 }
 
-.newsDefinitiveContainer .veryNew .imgVeryNew::before {
-  content: '+';
-  position: absolute;
-  top: 10%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 40px;
-  height: 40px;
-  color: black;
-  transform: translateX(-20px);
-  transform: translateY(-100px));
-  z-index: 300;
-  font-size: 200px;
-  opacity: 0;
+.newsDefinitiveContainer .newNoticiaRow .veryNew .veryNewText {
   transition: all .3s ease-in-out;
 }
 
-.newsDefinitiveContainer .veryNew .imgVeryNew:hover:before {
-  opacity: 1;
-  transform: translateX(0);
+.newsDefinitiveContainer .newNoticiaRow .veryNew .imgVeryNew {
+  background-size: cover;
+  position: relative;
+  z-index: 100;
+  height: 100%;
 }
 
-.newsDefinitiveContainer .veryNew .imgVeryNew::after {
-  content: '';
+.newsDefinitiveContainer .newNoticiaRow .veryNew.topLeft .imgVeryNew {
+  background-image: url(../img/artists/lakilan.jpg);
+  background-position: 50% 40%;
+}
+
+.newsDefinitiveContainer .newNoticiaRow .veryNew.bottomLeft .imgVeryNew {
+  background-image: url(../img/banners/snowfest2019_baner2.png);
+  background-position: 50% 25%;
+}
+
+.newsDefinitiveContainer .newNoticiaRow .veryNew.bottomRight .imgVeryNew {
+  background-image: url(../img/snowboard2.jpeg);
+  background-position: 50% 70%;
+}
+
+.newsDefinitiveContainer .newNoticiaRow .veryNew.topLeft .veryNewText {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  opacity: 0;
-  background-color: rgba(255, 255, 255, .7);
-  transition: opacity .3s ease-in-out;
+  width: 40%;
 }
 
-.newsDefinitiveContainer .veryNew .imgVeryNew:hover:after {
-  opacity: 1;
+.newsDefinitiveContainer .newNoticiaRow .veryNew.bottomLeft .veryNewText {
+  transform: translateY(-430px);
+  width: 90%;
 }
 
-.newsDefinitiveContainer .veryNew .imgVeryNew img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.newsDefinitiveContainer .veryNew.topLeft .veryNewText {
+.newsDefinitiveContainer .newNoticiaRow .veryNew.bottomRight .veryNewText {
   position: absolute;
-  top: 20px;
-  right: -750px;
-  width: 500px;
-  font-size: 20px;
-  text-align: justify;
-  opacity: 0;
-  transition: all .3s ease-in-out;
+  top: 0;
+  left: 0;
+  width: 40%;
 }
 
-.newsDefinitiveContainer .veryNew.topRight .veryNewText {
-  position: absolute;
-  top: 20px;
-  right: 50px;
-  width: 500px;
-  font-size: 20px;
-  text-align: justify;
-  opacity: 1;
-  transition: opacity .3s ease-in-out;
-}
-
-.newsDefinitiveContainer .veryNew.bottomLeft .veryNewText {
-  position: absolute;
-  top: -400px;
-  right: -750px;
-  width: 500px;
-  font-size: 20px;
-  text-align: justify;
-  opacity: 0;
-  transition: all .3s ease-in-out;
-}
-
-.newsDefinitiveContainer .veryNew.bottomRight .veryNewText {
-  position: absolute;
-  top: -400px;
-  right: 50px;
-  width: 500px;
-  font-size: 20px;
-  text-align: justify;
-  opacity: 0;
-  transition: all .3s ease-in-out;
-}
 
 .newsDefinitiveContainer .veryNew .veryNewText h4 {
   font-size: 24px;
@@ -978,17 +927,7 @@ button.content__close img {
   position: relative;
 }
 
-.news h2::after {
-  content: '';
-  position: absolute;
-  top: 150px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 4px;
-  height: 700px;
-  background-color: #242a59;
-}
+
 
 
 /* DEFINITIVE NEWS SECTION ABOVE */
