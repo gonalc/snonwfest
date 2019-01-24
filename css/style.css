@@ -113,12 +113,16 @@ section:not(#artistas) {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-image: url(../img/mockups/snowboarderlogo.png);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#242a59+0,32add6+100 */
-  background: #242a59; /* Old browsers */
-  background: -moz-linear-gradient(left, #242a59 0%, #32add6 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #242a59 0%,#32add6 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #242a59 0%,#32add6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242a59', endColorstr='#32add6',GradientType=1 ); /* IE6-9 */
+  /* background: #242a59;
+  background: -moz-linear-gradient(left, #242a59 0%, #32add6 100%);
+  background: -webkit-linear-gradient(left, #242a59 0%,#32add6 100%);
+  background: linear-gradient(to right, #242a59 0%,#32add6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242a59', endColorstr='#32add6',GradientType=1 );  */
 }
 .background_image img {
   height: auto;
@@ -801,6 +805,11 @@ button.content__close img {
 .newsDefinitiveContainer .veryNew .veryNewText h4 {
   font-size: 24px;
   color: white;
+}
+
+.newsDefinitiveContainer .veryNew .veryNewText h4 span.fecha-noticia {
+  color: #242a59;
+  font-size: 16px;
 }
 
 .isNewActive {
