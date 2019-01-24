@@ -120,11 +120,25 @@ $( document ).ready(function() {
 
     // Seccion de noticias
     var titulares = $('.veryNew.topRight');
+    var moveRight = null;
+
+
+    window.addEventListener("resize",function(){
+        moveRight = window.innerWidth;
+        if(window.innerWidth > 1450){
+          moveRight = 600 + 'px';
+        } else {
+          moveRight = 55 + 'vw';
+        }
+    });
+
+
 
     $('.topLeft').click(function(){
       titulares.css('opacity', '0');
+      console.log(moveRight);
       // $('.topLeft .veryNewText').css('left', '800px');
-      $('.topLeft .veryNewText').css('left', '55vw');
+      $('.topLeft .veryNewText').css('left', moveRight);
       $('.topLeft .veryNewText').css('opacity', '1');
 
       $('.bottomRight .veryNewText').css('left', '0');
