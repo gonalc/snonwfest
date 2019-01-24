@@ -72,6 +72,10 @@ $( document ).ready(function() {
 
     $('.grid a').click(function(){
       $('.home').addClass('hideHome');
+      $('.theFestival').addClass('hideHome');
+      $('.spaces').addClass('hideHome');
+      $('.news').addClass('hideHome');
+      $('.tickets').addClass('hideHome');
       $('.tickets-form').addClass('hideForm');
       $('.menu_button').addClass('hideForm');
       $('.content__item-intro h2').addClass('titleBackgroundOn').delay(400).fadeIn(300);
@@ -79,6 +83,10 @@ $( document ).ready(function() {
 
     $('.content__close').click(function(){
       $('.home').removeClass('hideHome');
+      $('.theFestival').removeClass('hideHome');
+      $('.spaces').removeClass('hideHome');
+      $('.news').removeClass('hideHome');
+      $('.tickets').removeClass('hideHome');
       $('.tickets-form').removeClass('hideForm');
       $('.menu_button').removeClass('hideForm');
       $('.content__item-intro h2').removeClass('titleBackgroundOn');
