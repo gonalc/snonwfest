@@ -104,6 +104,20 @@ p, li {
   }
 }
 
+.home {
+  position: relative;
+  z-index: -1;
+}
+
+.headerZakop {
+  position: absolute;
+  left: 20px;
+  bottom: 120px;
+  transform: rotate(-90deg);
+  color: white;
+  font-size: 24px;
+}
+
 section:not(#artistas) {
   padding: 20px;
 }
@@ -127,12 +141,76 @@ section:not(#artistas) {
 
 .background_image {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#242a59+0,32add6+100 */
+  background: #242a59; /* Old browsers */
+  background: -moz-linear-gradient(left, #242a59 0%, #32add6 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #242a59 0%,#32add6 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #242a59 0%,#32add6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242a59', endColorstr='#32add6',GradientType=1 ); /* IE6-9 */
 }
 .background_image img {
   height: auto;
   width: 100%;
 }
+
+#logo_home {
+  width: 100%;
+  /* animation: logoScale 30s infinite linear; */
+}
+
+/* ANIMACION LOGO INICIO */
+
+.moving-zone {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 120px;
+  margin: -60px 0 0 -150px;
+  perspective: 800px;
+  z-index: -1;
+}
+
+.popup {
+  position: absolute;
+  width: 300px;
+  cursor: pointer;
+  z-index: -1;
+  transform-style: preserve-3d;
+}
+
+.popup::before {
+  content: '';
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: 90%; height: 90%;
+  border-radius: inherit;
+  background: rgba(0, 0, 0, ,.1);
+  /* box-shadow: 0 0 40px 20px rgba(0, 0, 0, .1); */
+  transform: translateZ(-100px);
+  z-index: -1;
+}
+
+
+
+
+@keyframes logoScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 /* ================= *\
 |* === BG SLIDER === *|
