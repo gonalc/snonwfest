@@ -19,6 +19,66 @@ body {
   font-family: 'Thasadith', sans-serif;
 }
 
+.initialLoader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999999999;
+  background-color: #242a59;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: logoInitOut .5s 4.5s ease-in-out 1 forwards;
+}
+
+.initialLoader .logoIconContainer {
+  width: 35%;
+  opacity: 0;
+  animation: fadeInLogoInit .5s 3s 1 forwards ease-in-out;
+}
+
+.initialLoader .logoIconContainer img {
+  width: 100%;
+  height: auto;
+}
+
+.initialLoader .asterisk {
+  animation: spinLoader 4s 1 forwards;
+}
+
+@keyframes logoInitOut {
+  100% {
+    transform: translateX(-200vw);
+  }
+}
+
+@keyframes fadeInLogoInit {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spinLoader {
+  33% {
+    transform: rotate(360deg);
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+  66% {
+    transform: rotate(720deg);
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: rotate(1080deg);
+    opacity: 0;
+    animation-timing-function: ease-in-out;
+  }
+}
+
 ::selection {
   background-color: black;
   color: #32add6;
