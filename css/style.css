@@ -116,7 +116,7 @@ section:not(#artistas) {
   background-image: url(../img/mockups/snowboarderlogo.png);
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#242a59+0,32add6+100 */
   /* background: #242a59;
   background: -moz-linear-gradient(left, #242a59 0%, #32add6 100%);
@@ -464,15 +464,16 @@ button.content__close img {
 }
 
 .animacionPelota {
-  animation: pelotaInV2 5s ease-in-out forwards;
+  /* animation: pelotaInV2 5s ease-in-out forwards; */
+  animation: pelotaInV3 1s ease-in-out forwards;
 }
 
 .fadeInHorariosLista {
-  animation: fadeInHorarios .5s 5s ease-in-out forwards;
+  animation: fadeInHorarios .5s 1s ease-in-out forwards;
 }
 
 .fadeInHorariosClose {
-  animation: fadeInHorarios .5s 6s ease-in-out forwards;
+  animation: fadeInHorarios .5s 2s ease-in-out forwards;
 }
 
 .horarios_full .close_schedule img {
@@ -527,6 +528,22 @@ button.content__close img {
     top: 40vh;
     left: 20vw;
   }
+  100% {
+    width: 60vw;
+    height: 60vw;
+    top: -50vh;
+    left: 20vw;
+  }
+}
+
+@keyframes pelotaInV3 {
+  0% {
+    width: 0vw;
+    height: 0vw;
+    top: 120vh;
+    left: 20vw;
+  }
+
   100% {
     width: 60vw;
     height: 60vw;
