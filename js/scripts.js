@@ -142,6 +142,8 @@ $( document ).ready(function() {
       $('.topLeft .veryNewText').css('opacity', '1');
 
       $('.bottomRight .veryNewText').css('left', '0');
+      $('.bottomRight .veryNewText').css('opacity', '0');
+      $('.bottomLeft .veryNewText').css('opacity', '0');
       $('.bottomLeft .veryNewText').css('transform', 'translateY(-430px) translateX(0)');
 
     });
@@ -153,6 +155,8 @@ $( document ).ready(function() {
       $('.bottomRight .veryNewText').css('opacity', '1');
 
       $('.topLeft .veryNewText').css('left', '0');
+      $('.topLeft .veryNewText').css('opacity', '0');
+      $('.bottomLeft .veryNewText').css('opacity', '0');
       $('.bottomLeft .veryNewText').css('transform', 'translateY(-430px) translateX(0)');
 
     });
@@ -163,6 +167,8 @@ $( document ).ready(function() {
       $('.bottomLeft .veryNewText').css('opacity', '1');
 
       $('.topLeft .veryNewText').css('left', '0');
+      $('.topLeft .veryNewText').css('opacity', '0');
+      $('.bottomRight .veryNewText').css('opacity', '0');
       $('.bottomRight .veryNewText').css('left', '0');
 
     });
