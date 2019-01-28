@@ -733,6 +733,98 @@ button.content__close img {
   justify-content: space-between;
 }
 
+.containerMap .infoEspacios .shopSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerMap .infoEspacios .shopSection .shopItem {
+  background-color: #242a59;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(8deg);
+  transition: transform .3s ease-in-out;
+}
+.containerMap .infoEspacios .shopSection .shopItem a {
+  width: 150px;
+  transform: rotate(-8deg);
+  transition: transform .3s ease-in-out;
+}
+
+.containerMap .infoEspacios .shopSection .shopItem:hover {
+  transform: rotate(-8deg);
+}
+
+.containerMap .infoEspacios .shopSection .shopItem:hover a {
+  transform: rotate(8deg);
+}
+
+.containerMap .infoEspacios .shopSection .shopItem a img {
+  width: 100%;
+  height: auto;
+}
+
+.shopDetail {
+  width: 48vw;
+  height: 80vh;
+  background-color: #242a59;
+  border: 8px solid #32add6;
+  position: fixed;
+  bottom: -100vh;
+  right: -8px;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: -4px -3px 10px rgba(0, 0, 0, .5);
+  transition: bottom .3s ease-in-out;
+}
+
+.shopDetail .closeShop {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.shopDetail .closeShop img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.shopDetail .shopItemName {
+  color: white;
+}
+
+.shopDetail .shopItemDesc {
+  color: white;
+}
+
+.shopDetail .shopItemThumbnail {
+  width: 70%;
+  /* height: 300px; */
+}
+
+.shopDetail .shopItemThumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+.shopDetail .shopItemPrice {
+  color: white;
+}
+
+.shopDetail .shopItemPrice span:not(.dynamicPrice) {
+  color: #32add6;
+  margin-right: 16px;
+}
+
 .containerMap .infoEspacios hr {
   height: 2px;
   background-color: #242a59;

@@ -167,6 +167,39 @@ $( document ).ready(function() {
 
     });
 
+
+    // Tienda
+
+    $('.closeShop').click(function(){
+      $('.shopDetail').css('bottom', '-100vh');
+    });
+
+    $('.shopItem a').click(function(e){
+      e.preventDefault();
+      $('.shopDetail').css('bottom', '-8px');
+    });
+
+    $('.shopItem.gorra').click(function(){
+      $('.shopItemThumbnail img').attr('src', 'img/mockups/gorra_fondon_azul.jpg');
+      $('.shopItemName').text('Gorra');
+      $('.shopItemDesc').text('¡No porque sea invierno tienes que dejar de molar!');
+      $('.dynamicPrice').text('10€')
+    });
+
+    $('.shopItem.reloj').click(function(){
+      $('.shopItemThumbnail img').attr('src', 'img/mockups/reloj.jpg');
+      $('.shopItemName').text('Reloj');
+      $('.shopItemDesc').text('El complemento más necesario de todo buen festivalero.');
+      $('.dynamicPrice').text('20€')
+    });
+
+    $('.shopItem.vodka').click(function(){
+      $('.shopItemThumbnail img').attr('src', 'img/mockups/vodka_fondo_azul.jpg');
+      $('.shopItemName').text('Vodka');
+      $('.shopItemDesc').text('¿Qué sería del SnowFest sin su propio néctar de los dioses?');
+      $('.dynamicPrice').text('6€')
+    });
+
     // Animacion logo
 
     var moveForce = 30; // max popup movement in pixels
