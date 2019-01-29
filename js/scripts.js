@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
+  // ===========================================
+
   $('.venobox').venobox();
 
   $('.venobox_custom').venobox({
@@ -22,13 +24,38 @@ $( document ).ready(function() {
       }
 
       // El FESTIVAL
-      // Este esta bien, pero inncluyo todos los demas porque aun no se lo que van a ocupar
       if(scroll >= 1350) {
         // $('.theFestival .sectionTitle').addClass('titleIn');
-        $('.sectionTitle:not(#artistas .sectionTitle)').addClass('titleIn');
+        $('.theFestival .sectionTitle').addClass('titleIn');
       } else {
         // $('.theFestival .sectionTitle').removeClass('titleIn');
-        $('.sectionTitle:not(#artistas .sectionTitle)').removeClass('titleIn');
+        $('.theFestival .sectionTitle').removeClass('titleIn');
+      }
+      // ESPACIOS
+      if(scroll >= 1850) {
+        // $('.theFestival .sectionTitle').addClass('titleIn');
+        $('.spaces .sectionTitle').addClass('titleIn');
+      } else {
+        // $('.theFestival .sectionTitle').removeClass('titleIn');
+        $('.spaces .sectionTitle').removeClass('titleIn');
+      }
+
+      // NOTICIAS
+      if(scroll >= 2350) {
+        // $('.theFestival .sectionTitle').addClass('titleIn');
+        $('.news .sectionTitle').addClass('titleIn');
+      } else {
+        // $('.theFestival .sectionTitle').removeClass('titleIn');
+        $('.news .sectionTitle').removeClass('titleIn');
+      }
+
+      // TICKETS
+      if(scroll >= 2850) {
+        // $('.theFestival .sectionTitle').addClass('titleIn');
+        $('.tickets .sectionTitle').addClass('titleIn');
+      } else {
+        // $('.theFestival .sectionTitle').removeClass('titleIn');
+        $('.tickets .sectionTitle').removeClass('titleIn');
       }
     });
 
