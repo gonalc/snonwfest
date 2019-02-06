@@ -173,7 +173,8 @@ section:not(#artistas) {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-image: url(../img/mockups/snowboarderlogo.png);
+  background-image: url(../img/mockups/background-snowboarder.jpg);
+  /* background-image: url(../img/mockups/snowboarderlogo.png); */
   background-size: cover;
   background-position: center center;
   /* background-attachment: fixed; */
