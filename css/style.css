@@ -485,7 +485,7 @@ button.content__close img {
 .theFestival,
 .news {
   background-color: #32add6;
-  color: #242a59;
+  color: white;
   padding: 20px;
 }
 
@@ -685,6 +685,10 @@ button.content__close img {
   padding: 20px 0;
   display: flex;
   justify-content: space-around;
+}
+
+.festMap iframe {
+  border-radius: 15px!important;
 }
 
 .festMap .festText {
@@ -1158,18 +1162,92 @@ button.content__close img {
   padding-top: 25px;
 }
 
+.gender-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .gender-button input {
   margin-right: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+}
+
+.gender-button input:active,
+.gender-button input:focus {
+  outline: none;
+}
+
+.gender-button input:after {
+  transition: all .3s ease-in-out;
+}
+
+.gender-button input:checked::after {
+  content: '';
+  /* content: '\f2dc'; */
+  font-family: 'FontAwesome 5 Free';
+  font-weight: 400;
+  position: absolute;
+  top: 0; left: 0;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: blue;
+  border: 8px solid #242a59;
+  background-color: #32add6;
 }
 
 .desplegables-form {
   padding-bottom: 30px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .desplegables-form label {
   margin-right: 8px;
+}
+
+.desplegables-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 4px solid #32add6;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 10px 30px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.desplegables-form .desp {
+  position: relative;
+}
+
+.desplegables-form .desp:after {
+  content: '';
+  position: absolute;
+  top: 35px; right: 10px;
+  width: 20px; height: 20px;
+  background-image: url(../img/arrow-down_blue.png);
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.desplegables-form select:active,
+.desplegables-form select:focus {
+  outline: none;
 }
 
 .input__label--kuro {
