@@ -18,15 +18,63 @@ p {
   margin: 0;
 }
 
-.menu_button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+img {
+  width: 100%;
+  height: auto;
 }
-.menu_button .hamburger-inner {
+
+.btn {
+  background-color: #32add6;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #242a59;
+  font-size: 36px;
+}
+.btn span {
+  font-size: 48px;
+}
+
+.button_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+.button_container.scrolled {
   background-color: white;
 }
-.menu_button .hamburger-inner:after, .menu_button .hamburger-inner:before {
+.button_container.scrolled h1 {
+  opacity: 1;
+}
+.button_container.scrolled .menu_button {
+  padding-right: 20px;
+}
+.button_container.scrolled .menu_button .hamburger-inner {
+  background-color: #242a59;
+}
+.button_container.scrolled .menu_button .hamburger-inner:after, .button_container.scrolled .menu_button .hamburger-inner:before {
+  background-color: #242a59;
+}
+.button_container h1 {
+  width: 60%;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.button_container .menu_button {
+  padding-right: 20px;
+}
+.button_container .menu_button .hamburger-inner {
+  background-color: white;
+}
+.button_container .menu_button .hamburger-inner:after, .button_container .menu_button .hamburger-inner:before {
   background-color: white;
 }
 
@@ -54,6 +102,72 @@ header {
 }
 .artists .artistLink span {
   font-size: 48px;
+}
+
+.theFestival .scheduleBtn {
+  background-color: #32add6;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #242a59;
+}
+.theFestival .scheduleBtn p {
+  color: #242a59;
+}
+.theFestival .scheduleBtn span {
+  font-size: 48px;
+}
+.theFestival iframe {
+  width: 100%;
+  height: 100vh;
+}
+.theFestival .littleMap {
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+.theFestival .littleMap img {
+  width: 95%;
+  margin: auto;
+}
+
+.news .new {
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.news .new .newTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #32add6;
+}
+.news .new .newTitle p {
+  font-size: 24px;
+  color: white;
+}
+.news .new .newTitle span {
+  width: 50px;
+}
+.news .new.first {
+  background-image: url("../../img/artists/lakilan.jpg");
+  background-position: 50% 60%;
+}
+.news .new.second {
+  background-image: url("../../img/banners/snowfest2019_baner.png");
+  background-position: 50% 100%;
+}
+.news .new.third {
+  background-image: url("../../img/snowboard2.jpeg");
+  background-position: 50% 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

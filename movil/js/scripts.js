@@ -1,4 +1,5 @@
 
+  // Hamburguesa
   /**
    * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
    *
@@ -20,3 +21,22 @@
         }, false);
       });
     }
+
+// Cambiando el menu con el scroll
+navbarStyle();
+
+$(window).scroll(function () {
+    navbarStyle();
+});
+
+function navbarStyle() {
+    var altura_del_header = $('#cabecera').outerHeight(true);
+
+    if ($(window).scrollTop() >= altura_del_header) {
+        $('.button_container').addClass('scrolled');
+
+    } else {
+        $('.button_container').removeClass('scrolled');
+
+    }
+}
