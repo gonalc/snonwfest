@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  max-width: 768px;
+}
+
+header {
+  height: 100vh;
+  background-image: url("../../img/mockups/snowboarderlogo.png");
+  background-size: cover;
+  background-position: 48% 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

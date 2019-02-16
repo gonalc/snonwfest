@@ -1,0 +1,19 @@
+// sass --watch style.scss:style.css
+
+$blue: #32add6;
+$purple: #242a59;
+$titles: 'Ubuntu', sans-serif;
+$body: 'Thasadith', sans-serif;
+
+
+body {
+    margin: 0;
+    max-width: 768px;
+}
+
+header {
+    height: 100vh;
+    background-image: url('../../img/mockups/snowboarderlogo.png');
+    background-size: cover;
+    background-position: 48% 50%;
+}
