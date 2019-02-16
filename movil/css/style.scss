@@ -11,9 +11,56 @@ body {
     max-width: 768px;
 }
 
+h2 {
+    color: $purple;
+    font-size: 48px;
+    text-align: center;
+    font-family: $titles;
+    margin: 0;
+    padding: 16px 0;
+    border-bottom: 2px solid $purple;
+}
+p {
+    font-family: $body;
+    margin: 0;
+}
+
+.menu_button {
+    position: fixed;
+    top: 20px; right: 20px;
+    .hamburger-inner {
+        background-color: white;
+        &:after,
+        &:before {
+            background-color: white;
+        }
+    }
+}
+
 header {
     height: 100vh;
     background-image: url('../../img/mockups/snowboarderlogo.png');
     background-size: cover;
     background-position: 48% 50%;
+}
+
+.artists {
+    .artistLink {
+        background-color: $blue;
+        color: white;
+        padding: 12px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $purple;
+        .artistName {
+            font-size: 36px;
+            &.small {
+                font-size: 30px;
+            }
+        }
+        span {
+                font-size: 48px;
+            }
+    }
 }
