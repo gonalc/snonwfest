@@ -44,6 +44,7 @@ function navbarStyle() {
 // Galeria
 $(document).ready(function () {
   $("#lightgallery").lightGallery({
-    controls: false
+    controls: false,
+    showThumbByDefault: false
   });
 });

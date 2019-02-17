@@ -44,6 +44,12 @@ img {
     }
 }
 
+.lg-on {
+    .button_container {
+        display: none;
+    }
+}
+
 .button_container {
     position: fixed;
     top: 0; left: 0;
@@ -51,7 +57,7 @@ img {
     justify-content: space-between;
     padding: 20px;
     width: 100%;
-    z-index: 5000;
+    z-index: 2000;
     transition: background-color .3s ease-in-out;
     &.scrolled {
         background-color: white;
@@ -319,7 +325,3 @@ footer {
     text-align: center;
     padding: 50px;
 }
-
-.lg-toolbar.lg-group {
-            top: 100px!important;
-        }
