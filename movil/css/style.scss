@@ -149,6 +149,15 @@ header {
             margin: auto;
         }
     }
+    .inlineGallery {
+        #lightgallery {
+            display: flex;
+            margin: -4px 0;
+            a {
+                
+            }
+        }
+    }
 }
 
 .news {
@@ -310,3 +319,7 @@ footer {
     text-align: center;
     padding: 50px;
 }
+
+.lg-toolbar.lg-group {
+            top: 100px!important;
+        }

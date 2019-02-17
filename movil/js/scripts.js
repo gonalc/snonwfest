@@ -40,3 +40,10 @@ function navbarStyle() {
 
     }
 }
+
+// Galeria
+$(document).ready(function () {
+  $("#lightgallery").lightGallery({
+    controls: false
+  });
+});

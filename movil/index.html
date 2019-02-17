@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Snowfest 2019</title>
     <link rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/lightgallery.css" />
     <link rel="stylesheet" href="css/hamburgers.min.css">
     <link href="https://fonts.googleapis.com/css?family=Thasadith|Ubuntu" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -103,7 +104,20 @@
         frameborder="0" style="border:0" allowfullscreen></iframe>
 
     <div class="inlineGallery">
-        Aquí irá la galería
+        <div id="lightgallery">
+            <a href="../img/gallery/01ok.jpg">
+                <img src="../img/gallery/01small.jpg" />
+            </a>
+            <a href="../img/gallery/02ok.jpg">
+                <img src="../img/gallery/02small.jpg" />
+            </a>
+            <a href="../img/gallery/03ok.jpg">
+                <img src="../img/gallery/03small.jpg" />
+            </a>
+            <a href="../img/gallery/04ok.jpg">
+                <img src="../img/gallery/04small.jpg" />
+            </a>
+        </div>
     </div>
 
     <div class="btn shopBtn">
@@ -257,5 +271,14 @@
     
 
 <script src='js/scripts.js'></script>
+<!-- GALERIA -->
+<script src="js/lightgallery.min.js"></script>
+
+<!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+
+<!-- lightgallery plugins -->
+<script src="js/lg-thumbnail.min.js"></script>
+<script src="js/lg-fullscreen.min.js"></script>
 </body>
 </html>
