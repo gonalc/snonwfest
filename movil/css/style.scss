@@ -126,6 +126,8 @@ header {
         border-bottom: 1px solid $purple;
         p {
             color: $purple;
+            font-size: 36px;
+            color: white;
         }
         span {
             font-size: 48px;
@@ -155,6 +157,7 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        border-bottom: 2px solid $purple;
         .newTitle {
             display: flex;
             justify-content: space-between;
@@ -182,4 +185,127 @@ header {
             background-position: 50% 100%;
         }
     }
+}
+
+.tickets {
+    .shortDesc,
+    .moreInfo {
+        background-color: #eee;
+        padding: 16px;
+        font-family: $body;
+        text-align: center;
+        color: $purple;
+        font-size: 22px;
+        border-bottom: 1px solid $purple;
+    }
+    .moreInfo {
+        font-weight: bolder;
+    }
+    form {
+        background-color: #eee;
+        padding: 16px 16px 40px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        input[type='text'],
+        input[type='email'],
+        input[type='number'] {
+            background-color: transparent;
+            padding: 20px;
+            text-align: center;
+            border-radius: 0;
+            border: 4px solid $blue;
+            font-size: 24px;
+            width: 90%;
+            margin-bottom: 20px;
+            color: $purple;
+            font-family: $titles;
+            &::placeholder {
+                color: $purple;
+            }
+            &:active,
+            &:focus {
+                outline: none;
+            }
+        }
+        .radio {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            margin-bottom: 20px;
+            input {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                -o-appearance: none;
+                appearance: none;
+                width: 60px; height: 60px;
+                background-color: $blue;
+                border-radius: 50%;
+                margin-right: 30px;
+                transition: border .3s ease-in-out;
+                &:checked {
+                    border: 20px solid $purple;
+                }
+                &:active,
+                &:focus {
+                    outline: none;
+                }
+            }
+            label {
+                font-family: $titles;
+                font-size: 24px;
+                color: $purple;
+            }
+        }
+        .selectContainer {
+            position: relative;
+            width: 100%;
+            select {
+            background-color: transparent;
+            padding: 20px;
+            text-align: center;
+            border-radius: 0;
+            border: 4px solid $blue;
+            font-size: 24px;
+            width: 100%;
+            margin-bottom: 20px;
+            color: $purple;
+            font-family: $titles;
+            &:active,
+            &:focus {
+                outline: none;
+            }
+        }
+        &:after {
+                content: '';
+                position: absolute;
+                top: 15px; right: 20px;
+                width: 50px; height: 50px;
+                background-image: url('../../img/arrow-down_blue.png');
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+                z-index: 0;
+            }
+        }
+        input[type='submit'] {
+            width: 100%;
+            background-color: $purple;
+            color: white;
+            border: 4px solid $blue;
+            font-size: 24px;
+            padding: 20px;
+            font-family: $titles;
+        }
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    font-family: $titles;
+    font-size: 24px;
+    text-align: center;
+    padding: 50px;
 }

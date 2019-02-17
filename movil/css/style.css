@@ -115,6 +115,8 @@ header {
 }
 .theFestival .scheduleBtn p {
   color: #242a59;
+  font-size: 36px;
+  color: white;
 }
 .theFestival .scheduleBtn span {
   font-size: 48px;
@@ -142,6 +144,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  border-bottom: 2px solid #242a59;
 }
 .news .new .newTitle {
   display: flex;
@@ -168,6 +171,133 @@ header {
 .news .new.third {
   background-image: url("../../img/snowboard2.jpeg");
   background-position: 50% 100%;
+}
+
+.tickets .shortDesc,
+.tickets .moreInfo {
+  background-color: #eee;
+  padding: 16px;
+  font-family: "Thasadith", sans-serif;
+  text-align: center;
+  color: #242a59;
+  font-size: 22px;
+  border-bottom: 1px solid #242a59;
+}
+.tickets .moreInfo {
+  font-weight: bolder;
+}
+.tickets form {
+  background-color: #eee;
+  padding: 16px 16px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tickets form input[type=text],
+.tickets form input[type=email],
+.tickets form input[type=number] {
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+  border-radius: 0;
+  border: 4px solid #32add6;
+  font-size: 24px;
+  width: 90%;
+  margin-bottom: 20px;
+  color: #242a59;
+  font-family: "Ubuntu", sans-serif;
+}
+.tickets form input[type=text]::placeholder,
+.tickets form input[type=email]::placeholder,
+.tickets form input[type=number]::placeholder {
+  color: #242a59;
+}
+.tickets form input[type=text]:active, .tickets form input[type=text]:focus,
+.tickets form input[type=email]:active,
+.tickets form input[type=email]:focus,
+.tickets form input[type=number]:active,
+.tickets form input[type=number]:focus {
+  outline: none;
+}
+.tickets form .radio {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 20px;
+}
+.tickets form .radio input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  width: 60px;
+  height: 60px;
+  background-color: #32add6;
+  border-radius: 50%;
+  margin-right: 30px;
+  transition: border 0.3s ease-in-out;
+}
+.tickets form .radio input:checked {
+  border: 20px solid #242a59;
+}
+.tickets form .radio input:active, .tickets form .radio input:focus {
+  outline: none;
+}
+.tickets form .radio label {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  color: #242a59;
+}
+.tickets form .selectContainer {
+  position: relative;
+  width: 100%;
+}
+.tickets form .selectContainer select {
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+  border-radius: 0;
+  border: 4px solid #32add6;
+  font-size: 24px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #242a59;
+  font-family: "Ubuntu", sans-serif;
+}
+.tickets form .selectContainer select:active, .tickets form .selectContainer select:focus {
+  outline: none;
+}
+.tickets form .selectContainer:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-image: url("../../img/arrow-down_blue.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.tickets form input[type=submit] {
+  width: 100%;
+  background-color: #242a59;
+  color: white;
+  border: 4px solid #32add6;
+  font-size: 24px;
+  padding: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  padding: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
