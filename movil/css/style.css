@@ -197,6 +197,56 @@ header {
 .theFestival .inlineGallery #lightgallery a {
   width: 33%;
 }
+.theFestival .fullShop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #32add6;
+  z-index: 4000;
+  padding: 20px;
+  box-sizing: border-box;
+  display: none;
+}
+.theFestival .fullShop.onScreen {
+  display: block;
+}
+.theFestival .fullShop .closeScheduleBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+.theFestival .fullShop .closeScheduleBtn i {
+  font-size: 40px;
+  color: #242a59;
+}
+.theFestival .fullShop h4 {
+  font-size: 48px;
+  color: #242a59;
+  margin: 0 0 16px 0;
+  font-family: "Ubuntu", sans-serif;
+}
+.theFestival .fullShop p {
+  font-size: 24px;
+  text-align: justify;
+}
+.theFestival .fullShop .shopItem {
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+.theFestival .fullShop .shopItem .itemPic {
+  flex-basis: 45%;
+  margin-right: 40px;
+}
+.theFestival .fullShop .shopItem .itemPic.reloj {
+  margin: 0 60px 0 -20px;
+}
+.theFestival .fullShop .shopItem span {
+  font-size: 40px;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+}
 
 .news .new {
   height: 200px;

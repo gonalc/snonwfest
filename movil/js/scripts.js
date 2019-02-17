@@ -53,5 +53,10 @@ $(document).ready(function () {
 
   $('.closeScheduleBtn').click(function () {
     $('.horariosFull').removeClass('onScreen');
+    $('.fullShop').removeClass('onScreen');
+  });
+
+  $('.shopBtn').click(function () {
+    $('.fullShop').addClass('onScreen');
   });
 });

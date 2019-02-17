@@ -211,6 +211,54 @@ header {
             }
         }
     }
+    .fullShop {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background-color: $blue;
+        z-index: 4000;
+        padding: 20px;
+        box-sizing: border-box;
+        display: none;
+        &.onScreen {
+            display: block;
+        }
+        .closeScheduleBtn {
+            display: flex;
+            justify-content: flex-end;
+            i {
+                font-size: 40px;
+                color: $purple;
+            }
+        }
+        h4 {
+                font-size: 48px;
+                color: $purple;
+                margin: 0 0 16px 0;
+                font-family: $titles;
+        }
+        p {
+            font-size: 24px;
+            text-align: justify;
+        }
+        .shopItem {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            .itemPic {
+                flex-basis: 45%;
+                margin-right: 40px;
+                &.reloj {
+                    margin: 0 60px 0 -20px;
+                }
+            }
+            span {
+                font-size: 40px;
+                color: white;
+                font-family: $titles;
+            }
+        }
+    }
 }
 
 .news {
