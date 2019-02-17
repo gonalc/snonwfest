@@ -41,9 +41,17 @@ function navbarStyle() {
     }
 }
 
-// Galeria
+// Galeria, horarios y demás cosas del document.ready
 $(document).ready(function () {
   $("#lightgallery").lightGallery({
     controls: false,
+  });
+
+  $('.scheduleBtn').click(function(){
+    $('.horariosFull').addClass('onScreen');
+  });
+
+  $('.closeScheduleBtn').click(function () {
+    $('.horariosFull').removeClass('onScreen');
   });
 });

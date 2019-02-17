@@ -109,6 +109,52 @@ header {
   font-size: 48px;
 }
 
+.theFestival .horariosFull {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #32add6;
+  z-index: 4000;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+.theFestival .horariosFull.onScreen {
+  display: block;
+}
+.theFestival .horariosFull .closeScheduleBtn {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.theFestival .horariosFull .closeScheduleBtn i {
+  font-size: 40px;
+  color: #242a59;
+}
+.theFestival .horariosFull .scheduleDay {
+  padding: 20px;
+}
+.theFestival .horariosFull .scheduleDay h4 {
+  font-size: 48px;
+  color: #242a59;
+  margin: 0 0 16px 0;
+  font-family: "Ubuntu", sans-serif;
+}
+.theFestival .horariosFull .scheduleDay ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.theFestival .horariosFull .scheduleDay ul li {
+  font-family: "Thasadith", sans-serif;
+  color: #242a59;
+  font-size: 24px;
+}
+.theFestival .horariosFull .scheduleDay ul li span {
+  color: white;
+}
 .theFestival .scheduleBtn {
   background-color: #32add6;
   color: white;

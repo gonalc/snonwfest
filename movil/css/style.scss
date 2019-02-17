@@ -123,6 +123,50 @@ header {
 }
 
 .theFestival {
+    .horariosFull {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background-color: $blue;
+        z-index: 4000;
+        display: flex;
+        flex-direction: column;
+        display: none;
+        &.onScreen {
+            display: block;
+        }
+        .closeScheduleBtn {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+            i {
+                font-size: 40px;
+                color: $purple;
+            }
+        }
+        .scheduleDay {
+            padding: 20px;
+            h4 {
+                font-size: 48px;
+                color: $purple;
+                margin: 0 0 16px 0;
+                font-family: $titles;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                li {
+                    font-family: $body;
+                    color: $purple;
+                    font-size: 24px;
+                    span {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
     .scheduleBtn {
         background-color: $blue;
         color: white;
