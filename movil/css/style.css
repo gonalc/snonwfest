@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   max-width: 768px;
@@ -41,6 +45,25 @@ img {
   display: none;
 }
 
+.showMenu .button_container {
+  background-color: white;
+}
+.showMenu .button_container h1 {
+  opacity: 1;
+}
+.showMenu .button_container .menu_button {
+  padding-right: 20px;
+}
+.showMenu .button_container .menu_button .hamburger-inner {
+  background-color: #242a59;
+}
+.showMenu .button_container .menu_button .hamburger-inner:after, .showMenu .button_container .menu_button .hamburger-inner:before {
+  background-color: #242a59;
+}
+.showMenu nav {
+  left: 0;
+}
+
 .button_container {
   position: fixed;
   top: 0;
@@ -81,6 +104,34 @@ img {
 }
 .button_container .menu_button .hamburger-inner:after, .button_container .menu_button .hamburger-inner:before {
   background-color: white;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: #242a59;
+  z-index: 1950;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.3s ease-in-out;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-family: "Thasadith", sans-serif;
+  font-size: 36px;
+  text-decoration: none;
+  line-height: 1.8;
 }
 
 header {
@@ -134,7 +185,7 @@ header {
   color: #242a59;
 }
 .theFestival .horariosFull .scheduleDay {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 .theFestival .horariosFull .scheduleDay h4 {
   font-size: 48px;
@@ -231,7 +282,7 @@ header {
   text-align: justify;
 }
 .theFestival .fullShop .shopItem {
-  height: 150px;
+  height: 100px;
   display: flex;
   align-items: center;
 }

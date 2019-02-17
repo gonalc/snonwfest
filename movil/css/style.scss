@@ -5,6 +5,9 @@ $purple: #242a59;
 $titles: 'Ubuntu', sans-serif;
 $body: 'Thasadith', sans-serif;
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
@@ -50,6 +53,28 @@ img {
     }
 }
 
+.showMenu {
+    .button_container {
+        background-color: white;
+        h1 {
+            opacity: 1;
+        }
+        .menu_button {
+        padding-right: 20px;
+        .hamburger-inner {
+            background-color: $purple;
+            &:after,
+            &:before {
+                background-color: $purple;
+            }
+        }
+    }  
+    }
+    nav {
+        left: 0;
+    }
+}
+
 .button_container {
     position: fixed;
     top: 0; left: 0;
@@ -91,6 +116,34 @@ img {
             }
         }
     }      
+}
+
+nav {
+    position: fixed;
+    top: 0; left: -100vw;
+    width: 100vw; height: 100vh;
+    background-color: $purple;
+    z-index: 1950;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left .3s ease-in-out;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            a {
+                display: block;
+                color: white;
+                text-align: center;
+                font-family: $body;
+                font-size: 36px;
+                text-decoration: none;
+                line-height: 1.8;
+            }
+        }
+    }
 }
 
 
@@ -145,7 +198,7 @@ header {
             }
         }
         .scheduleDay {
-            padding: 20px;
+            padding: 0 20px 20px 20px;
             h4 {
                 font-size: 48px;
                 color: $purple;
@@ -242,7 +295,7 @@ header {
             text-align: justify;
         }
         .shopItem {
-            height: 150px;
+            height: 100px;
             display: flex;
             align-items: center;
             .itemPic {

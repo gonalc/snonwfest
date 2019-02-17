@@ -59,4 +59,23 @@ $(document).ready(function () {
   $('.shopBtn').click(function () {
     $('.fullShop').addClass('onScreen');
   });
+
+  // Menu
+  var menu = 0;
+  $('.menu_button').click(function () {
+    if(menu === 0){
+      $('body').addClass('showMenu');
+      $('.hamburger').addClass('is-active');
+      menu = 1;
+    } else {
+      $('body').removeClass('showMenu');
+      $('.hamburger').removeClass('is-active');
+      menu = 0;
+    }
+  });
+  $('.navItemMob').click(function(){
+    $('body').removeClass('showMenu');
+    $('.hamburger').removeClass('is-active');
+    menu = 0;
+  });
 });
