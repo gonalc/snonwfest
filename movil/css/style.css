@@ -143,8 +143,15 @@ header {
 }
 .theFestival .inlineGallery #lightgallery {
   display: flex;
-  margin: -4px 0;
+  flex-wrap: wrap;
+  margin-top: -5px;
+  height: 100px;
+  overflow: hidden;
 }
+.theFestival .inlineGallery #lightgallery a {
+  width: 33%;
+}
+
 .news .new {
   height: 200px;
   width: 100%;

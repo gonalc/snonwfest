@@ -45,6 +45,5 @@ function navbarStyle() {
 $(document).ready(function () {
   $("#lightgallery").lightGallery({
     controls: false,
-    showThumbByDefault: false
   });
 });
