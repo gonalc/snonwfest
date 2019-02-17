@@ -45,6 +45,7 @@ img {
   justify-content: space-between;
   padding: 20px;
   width: 100%;
+  z-index: 5000;
   transition: background-color 0.3s ease-in-out;
 }
 .button_container.scrolled {
