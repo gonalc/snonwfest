@@ -150,6 +150,9 @@ header {
   align-items: center;
   border-bottom: 1px solid #242a59;
 }
+.artists .artistLink.artist-active span {
+  transform: rotate(315deg);
+}
 .artists .artistLink .artistName {
   font-size: 36px;
 }
@@ -158,6 +161,54 @@ header {
 }
 .artists .artistLink span {
   font-size: 48px;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center center;
+}
+.artists .detailArtist {
+  background-color: #eee;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+.artists .detailArtist.showDetail {
+  height: auto;
+}
+.artists .detailArtist .stage {
+  margin: 10px;
+  border: 1px solid #242a59;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.artists .detailArtist .stage h4 {
+  font-family: "Thasadith", sans-serif;
+  color: #242a59;
+  font-size: 24px;
+  margin: 0;
+}
+.artists .detailArtist .stage p {
+  font-size: 20px;
+  color: #242a59;
+}
+.artists .detailArtist .spotifyList {
+  width: 100%;
+}
+.artists .detailArtist .spotifyList iframe {
+  width: 100vw;
+  height: 50vh;
+}
+.artists .detailArtist .RRSSMobile .DJSocialNetwork {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 16px 0;
+  list-style: none;
+}
+.artists .detailArtist .RRSSMobile .DJSocialNetwork a {
+  color: #242a59;
 }
 
 .theFestival .horariosFull {

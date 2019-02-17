@@ -105,4 +105,57 @@ $(document).ready(function () {
     $('.thirdNew').css('height', 'auto');
     $('.thirdNew').css('padding', '16px');
   });
+
+  // Artistas
+  $('.artistLink').click(function(){
+    $(this).toggleClass('artist-active');
+  }); // Esta función es para girar el aspa
+
+  $('.andyc').click(function(){
+    $('.Andyc').toggleClass('showDetail');
+  });
+
+  $('.ghostface').click(function () {
+    $('.Ghostface').toggleClass('showDetail');
+  });
+
+  $('.booka').click(function () {
+    $('.Booka').toggleClass('showDetail');
+  });
+
+  $('.wilkinson').click(function () {
+    $('.Wilkinson').toggleClass('showDetail');
+  });
+
+  $('.catz').click(function () {
+    $('.Catz').toggleClass('showDetail');
+  });
+
+  $('.friction').click(function () {
+    $('.Friction').toggleClass('showDetail');
+  });
+
+  $('.alix').click(function () {
+    $('.Alix').toggleClass('showDetail');
+  });
+
+  $('.calyx').click(function () {
+    $('.Calyx').toggleClass('showDetail');
+  });
+
+  $('.lakilan').click(function () {
+    $('.Lakilan').toggleClass('showDetail');
+  });
+
+  $('.rapowanie').click(function () {
+    $('.Rapowanie').toggleClass('showDetail');
+  });
+
+  $('.conrad').click(function () {
+    $('.Conrad').toggleClass('showDetail');
+  });
+
+  $('.teddybears').click(function () {
+    $('.Teddybears').toggleClass('showDetail');
+  });
 });

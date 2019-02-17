@@ -163,6 +163,11 @@ header {
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid $purple;
+        &.artist-active {
+            span {
+                transform: rotate(315deg);
+            }
+        }
         .artistName {
             font-size: 36px;
             &.small {
@@ -171,7 +176,57 @@ header {
         }
         span {
                 font-size: 48px;
+                transition: transform .3s ease-in-out;
+                transform-origin: center center;
             }
+    }
+    .detailArtist {
+        background-color: #eee;
+        height: 0;
+        overflow: hidden;
+        transition: height .3s ease-in-out;
+        &.showDetail {
+            height: auto;
+        }
+        .stage {
+            margin: 10px;
+            border: 1px solid $purple;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            h4 {
+                font-family: $body;
+                color: $purple;
+                font-size: 24px;
+                margin: 0;
+            }
+            p {
+                font-size: 20px;
+                color: $purple;
+            }
+        }
+        .spotifyList {
+            width: 100%;
+            iframe {
+                width: 100vw;
+                height: 50vh;
+            }
+        }
+        .RRSSMobile {
+            .DJSocialNetwork {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 0;
+                padding: 16px 0;
+                list-style: none;
+                a {
+                    color: $purple;
+                }
+            }
+        }
     }
 }
 
