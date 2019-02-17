@@ -349,9 +349,50 @@ header {
             background-position: 50% 100%;
         }
     }
+    .newContent {
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        transition: height .3s ease-in-out;
+        p {
+            font-size: 20px;
+            color: $purple;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .tickets {
+    .moreInfoTickets {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background-color: $blue;
+        z-index: 5000;
+        padding: 20px;
+        box-sizing: border-box;
+        font-family: $body;
+        font-size: 24px;
+        color: white;
+        display: none;
+        &.onScreen {
+            display: block;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin: 16px 0 30px 0;
+        }
+        .closeScheduleBtn {
+            display: flex;
+            justify-content: flex-end;
+            i {
+                font-size: 40px;
+                color: $purple;
+            }
+        }
+    }
     .shortDesc,
     .moreInfo {
         background-color: #eee;

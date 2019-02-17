@@ -54,10 +54,15 @@ $(document).ready(function () {
   $('.closeScheduleBtn').click(function () {
     $('.horariosFull').removeClass('onScreen');
     $('.fullShop').removeClass('onScreen');
+    $('.moreInfoTickets').removeClass('onScreen');
   });
 
   $('.shopBtn').click(function () {
     $('.fullShop').addClass('onScreen');
+  });
+
+  $('.moreInfo').click(function () {
+    $('.moreInfoTickets').addClass('onScreen');
   });
 
   // Menu
@@ -77,5 +82,27 @@ $(document).ready(function () {
     $('body').removeClass('showMenu');
     $('.hamburger').removeClass('is-active');
     menu = 0;
+  });
+
+  // Noticias
+  $('.new.first').click(function(){
+    $('.newContent').css('height', '0');
+    $('.newContent').css('padding', '0');
+    $('.firstNew').css('height', 'auto');
+    $('.firstNew').css('padding', '16px');
+  });
+
+  $('.new.second').click(function () {
+    $('.newContent').css('height', '0');
+    $('.newContent').css('padding', '0');
+    $('.secondNew').css('height', 'auto');
+    $('.secondNew').css('padding', '16px');
+  });
+
+  $('.new.third').click(function () {
+    $('.newContent').css('height', '0');
+    $('.newContent').css('padding', '0');
+    $('.thirdNew').css('height', 'auto');
+    $('.thirdNew').css('padding', '16px');
   });
 });
